@@ -65,7 +65,7 @@ $: OKBOOMER = uppercase ? generate(amount).toUpperCase() : generate(amount)
 .output {
   max-width: 90vw;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1em 2.5em;
   width: 100%;
   text-align: center;
 }
