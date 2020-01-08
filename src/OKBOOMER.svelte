@@ -7,9 +7,9 @@ export let defaultLength = 10;
 
 function generate(length) {
   const OK_BOOMER = 'ok boomer'
-  let result = OK_BOOMER
+  let result = ''
   for (let index = 0; index < length; index++) {
-    result += ` ${OK_BOOMER}`
+    result += `${OK_BOOMER} `
   }
   return result
 }
@@ -31,13 +31,3 @@ $: OKBOOMER = uppercase ? generate(amount).toUpperCase() : generate(amount)
 <p>
   {OKBOOMER}
 </p>
-
-
-
-<style>
-  textarea {
-    max-width: 500px;
-    width: 100%;
-    min-height: 300px;
-  }
-</style>
