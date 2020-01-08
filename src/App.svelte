@@ -1,6 +1,7 @@
 <script>
 import Header from './Header.svelte'
 import OKBOOMER from './OKBOOMER.svelte'
+
 </script>
 
 <Header title="OK BOOMER" />
@@ -10,13 +11,10 @@ import OKBOOMER from './OKBOOMER.svelte'
 
 <style>
 	:global(body) {
+		position: relative;
 		margin: 0;
 		padding: 0;
-	}
-
-	main {
-		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
+		background: #211c43;
+		color: #908bc7;
 	}
 </style>

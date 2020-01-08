@@ -11,8 +11,8 @@ export let title;
 
 <style>
 header {
-  color: #fff;
-  background: #000;
+  color: #ec5576;
+  background: #1a1538;
   text-align: center;
   padding: 3rem 0;
 }
