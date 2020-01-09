@@ -1,13 +1,14 @@
 <script>
+import { word } from './store.js';
+
 import ClipboardButton from './ClipboardButton.svelte'
 
 export let defaultLength = 10;
 
-function generate(length) {
-  const OK_BOOMER = 'ok boomer'
+function generate(length, word) {
   let result = ''
   for (let index = 0; index < length; index++) {
-    result += `${OK_BOOMER} `
+    result += `${word} `
   }
   return result
 }
@@ -15,7 +16,7 @@ function generate(length) {
 
 let amount = defaultLength;
 $: uppercase = false;
-$: OKBOOMER = uppercase ? generate(amount).toUpperCase() : generate(amount)
+$: OKBOOMER = uppercase ? generate(amount, $word).toUpperCase() : generate(amount, $word)
 
 </script>
 
@@ -23,7 +24,7 @@ $: OKBOOMER = uppercase ? generate(amount).toUpperCase() : generate(amount)
   <div class="settings__options">
     <label>
       <span>amount</span>
-      <input type="number" class="settings__amount" bind:value={amount}>
+      <input type="number" class="settings__amount" bind:value={amount} min="1" max="10000">
     </label>
     <label class="settings__char">
       <span>uppercase?</span>
